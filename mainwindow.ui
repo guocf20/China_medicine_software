@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>293</width>
+    <height>296</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string/>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>293</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuadd">
+    <property name="title">
+     <string>药物管理</string>
+    </property>
+    <addaction name="show_medicine"/>
+    <addaction name="add_medicine"/>
+    <addaction name="modify_medicine"/>
+    <addaction name="del_medicine"/>
+   </widget>
+   <widget class="QMenu" name="menuff">
+    <property name="title">
+     <string>处方管理</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menurecord">
+    <property name="title">
+     <string>病历管理</string>
+    </property>
+    <addaction name="actionadd_record"/>
+    <addaction name="action_search_record"/>
+    <addaction name="actionmodify_record_2"/>
+    <addaction name="actiondel_record"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>关于</string>
+    </property>
+    <addaction name="actionversion"/>
+    <addaction name="actionauthor"/>
+   </widget>
+   <addaction name="menuadd"/>
+   <addaction name="menurecord"/>
+   <addaction name="menuff"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="show_medicine">
+   <property name="text">
+    <string>显示药物</string>
+   </property>
+  </action>
+  <action name="add_medicine">
+   <property name="text">
+    <string>增加药物</string>
+   </property>
+  </action>
+  <action name="modify_medicine">
+   <property name="text">
+    <string>修改药物</string>
+   </property>
+  </action>
+  <action name="del_medicine">
+   <property name="text">
+    <string>删除药物</string>
+   </property>
+  </action>
+  <action name="actionadd_record">
+   <property name="text">
+    <string>添加病历</string>
+   </property>
+  </action>
+  <action name="action_search_record">
+   <property name="text">
+    <string>查询病历</string>
+   </property>
+  </action>
+  <action name="actionmodify_record_2">
+   <property name="text">
+    <string>更新病历</string>
+   </property>
+  </action>
+  <action name="actiondel_record">
+   <property name="text">
+    <string>删除病历</string>
+   </property>
+  </action>
+  <action name="actionversion">
+   <property name="text">
+    <string>版本</string>
+   </property>
+  </action>
+  <action name="actionauthor">
+   <property name="text">
+    <string>作者</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
