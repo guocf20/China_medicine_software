@@ -13,6 +13,7 @@
 #include<QLineEdit>
 #include<QLabel>
 #include<QPushButton>
+#include<QHeaderView>
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
@@ -48,8 +49,10 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-static void message()
+/*
+ *显示所有药品
+*/
+static void show_all_medicine()
 {
     QWidget *medicine_win = new QWidget;
 
@@ -62,7 +65,7 @@ static void message()
     QStringList header;
     header<<"编号"<<"名称"<<"单价(克/元)"<<"库存(克)"<<"备注";
     medicine_table->setHorizontalHeaderLabels(header);
-
+    medicine_table->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 
     layout->addWidget(medicine_table);
     medicine_win->setLayout(layout);
@@ -121,6 +124,7 @@ void MainWindow::on_action_search_record_triggered()
     QStringList header;
     header<<"编号"<<"名称"<<"性别"<<"日期"<<"电话"<<"症状"<<"药方"<<"备注";
     medicine_table->setHorizontalHeaderLabels(header);
+    medicine_table->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 
     layout->addWidget(medicine_table);
     medicine_win->setLayout(layout);
@@ -194,7 +198,7 @@ void MainWindow::on_actiondel_record_triggered()
 
 void MainWindow::on_show_medicine_triggered()
 {
-    message();
+    show_all_medicine();
 }
 
 
