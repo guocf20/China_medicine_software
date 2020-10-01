@@ -14,6 +14,8 @@ class Login_Dialog : public QDialog
 public:
     explicit Login_Dialog(QWidget *parent = nullptr);
     ~Login_Dialog();
+protected:
+    virtual void closeEvent(QCloseEvent *) override;
 
 private slots:
     void on_login_clicked();

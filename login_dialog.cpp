@@ -30,6 +30,12 @@ Login_Dialog::Login_Dialog(QWidget *parent) :
 Login_Dialog::~Login_Dialog()
 {
     delete ui;
+
+}
+
+void Login_Dialog::closeEvent(QCloseEvent *event)
+{
+    exit(0);
 }
 
 int check_valid_user(QString user_name, QString passwd)
@@ -85,7 +91,7 @@ if(check_valid_user(username, passwd) == 0)
 void Login_Dialog::on_pushButton_clicked()
 {
     Change_Pwd_Dialog *pwd_win = new Change_Pwd_Dialog;
-
+    qDebug()<<"change passwd";
     pwd_win->exec();
     reject();
 }

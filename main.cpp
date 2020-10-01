@@ -36,6 +36,14 @@ int main(int argc, char *argv[])
     Login_Dialog q;
     int result;
     result = q.exec();
+    qDebug()<<"q.exec()";
+
+    while(result == QDialog::Rejected)
+    {
+        qDebug()<<"rejected";
+         result = q.exec();
+    }
+
     if(result == QDialog::Accepted)
     {
         init();
